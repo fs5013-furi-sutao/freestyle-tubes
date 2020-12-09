@@ -1,0 +1,50 @@
+# Sidebar navigation
+
+- label: 'YouTube ライブラリ'
+  link: '/'
+- label: 'FreeStyle'
+  items:
+    - label: '青野社長成功哲学教育'
+      link: '/usage/creating-docs'
+    - label: '岡島部長成功哲学教育'
+      link: '/usage/navigation'
+- label: '成長'
+  items:
+    - label: 'きゅうりの成長記録'
+      link: '/usage/creating-docs'
+    - label: 'トマトの成長記録'
+      link: '/usage/navigation'
+    - label: 'オクラの成長記録'
+      link: '/usage/shadowing'
+- label: '本社定例会'
+  items:
+    - label: '2019年度 本社定例会'
+      link: '/mgm/company/2019'
+    - label: '2020年度 本社定例会'
+      link: '/mgm/company/2020'
+    - label: '2021年度 本社定例会'
+      link: '/mgm/company/2021'
+- label: '受託部定例会'
+  items:
+    - label: '2019年度 受託部定例会'
+      link: '/mgm/entrusted/2019'
+    - label: '2020年度 受託部定例会'
+      link: '/mgm/entrusted/2020'
+    - label: '2021年度 受託部定例会'
+      link: '/mgm/entrusted/2021'
+- label: 'ゲーム事業部定例会'
+  items:
+    - label: '2019年度 ゲーム事業部定例会'
+      link: '/mgm/game/2019'
+    - label: '2020年度 ゲーム事業部定例会'
+      link: '/mgm/game/2020'
+    - label: '2021年度 ゲーム事業部定例会'
+      link: '/mgm/game/2021'
+- label: 'その他'
+  items:
+    - label: '更新履歴'
+      link: /changelog
+- label: Company
+  items:
+    - label: '株式会社フリースタイル'
+      link: http://freestyles.jp/

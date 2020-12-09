@@ -10,7 +10,7 @@ module.exports = {
     siteImage: `/banner.png`,
     siteLanguage: `ja`,
     themeColor: `#8257E6`,
-    basePath: `/`,
+    basePath: `/freestyle-tubes`,
   },
   plugins: [
     {

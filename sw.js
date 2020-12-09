@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-e405a321ab0c0efb1f13.js"
+    "url": "webpack-runtime-d84e5ba0846532629e25.js"
   },
   {
     "url": "framework-1bcdbcdd30f43763a25c.js"
@@ -36,11 +36,11 @@ self.__precacheManifest = [
     "url": "f0e45107-02a22ac72de90821f3f0.js"
   },
   {
-    "url": "app-cdf763c458a643c6d2ce.js"
+    "url": "app-283a94e273df8f4bc337.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "c1dabbfd3794f6ace122e8112aeeef25"
+    "revision": "ea82a4096e87a7c70877bb28e48bf606"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"
@@ -51,14 +51,14 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "11b175766f7e446a9ede977bf557d9de"
+    "revision": "fc49a8e661637ba96a8b68fc3c325a30"
   },
   {
     "url": "polyfill-5204fa10d5950c3006a4.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "cf6ac40610cfb0321ba2ae8e44f38625"
+    "revision": "ba2a1b060ca9d8c541bc1a3da2c392ab"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -145,12 +145,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/freestyle-tubes`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-cdf763c458a643c6d2ce.js`))) {
+  if (!resources || !(await caches.match(`/freestyle-tubes/app-283a94e273df8f4bc337.js`))) {
     return await fetch(event.request)
   }
 
@@ -163,7 +163,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/freestyle-tubes/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
